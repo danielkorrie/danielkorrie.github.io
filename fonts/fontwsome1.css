@@ -1,0 +1,19 @@
+#about {
+    padding-top: 50px;
+}
+
+#my-name {
+    text-shadow: 10px 10px 50px #444444 ;
+}
+#about{
+    font-style:italic;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    margin:auto;
+}
+#portfolio{
+    padding-top: 50px;
+}
+
+
