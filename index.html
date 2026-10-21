@@ -65,7 +65,8 @@ a{color:inherit}
 .hi{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:#D5E5F6;margin:0 0 22px;padding:7px 14px 7px 10px;border-radius:999px;background:rgba(143,193,238,.1);border:1px solid rgba(143,193,238,.22)}
 .pulse{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 rgba(95,211,166,.6)}
 h1{font-size:clamp(42px,5.4vw,72px);line-height:.98;letter-spacing:-.038em;font-weight:900;margin:0 0 26px}
-h1 .name{display:block;font-size:.42em;letter-spacing:-.02em;font-weight:700;color:var(--sky);margin-bottom:14px;line-height:1.1}
+.name{font-size:clamp(20px,2vw,26px);letter-spacing:-.015em;font-weight:700;color:#fff;margin:0 0 14px;line-height:1.2}
+.name span{display:block;font-size:.66em;font-weight:600;color:var(--sky);letter-spacing:0;margin-top:4px}
 .lede{font-size:20px;line-height:1.6;color:#BFD2E8;max-width:31em;margin:0 0 36px}
 .row{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
 .btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s}
@@ -90,7 +91,7 @@ h1 .name{display:block;font-size:.42em;letter-spacing:-.02em;font-weight:700;col
 .chip{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:rgba(16,40,74,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(143,193,238,.28);box-shadow:0 18px 40px -20px rgba(0,0,0,.7);font-size:14px;line-height:1.25;color:#fff;white-space:nowrap}
 .chip b{display:block;font-size:17px}
 .chip small{display:block;color:#AFC6E0;font-size:12.5px}
-.chip .ic{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;background:var(--sky);color:var(--night);font-weight:900;font-size:14px;flex:none}
+.chip .ic{min-width:32px;padding:0 6px;height:32px;border-radius:9px;display:grid;place-items:center;background:var(--sky);color:var(--night);font-weight:900;font-size:14px;flex:none}
 .chip.c1{left:-56px;top:22%}
 .chip.c2{right:-40px;top:52%}
 .chip.c3{left:-28px;bottom:6%}
@@ -123,6 +124,10 @@ h1 .name{display:block;font-size:.42em;letter-spacing:-.02em;font-weight:700;col
 .detail .num{font-size:44px;font-weight:900;letter-spacing:-.04em;color:var(--blue);line-height:1;min-width:58px}
 .detail h3{margin:0 0 2px;font-size:19px}
 .detail p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}
+.io{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.io span{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--deep);background:#fff;border:1px solid var(--rule);border-radius:8px;padding:5px 10px}
+.io em{font-style:normal;font-size:11.5px;font-weight:800;color:#fff;background:var(--blue);border-radius:5px;padding:1px 6px}
+.io span + span em{background:var(--mint);color:var(--night)}
 .tag{font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;white-space:nowrap}
 .tag.ai{background:var(--blue);color:#fff}
 .tag.py{background:#fff;color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue)}
@@ -134,6 +139,18 @@ h1 .name{display:block;font-size:.42em;letter-spacing:-.02em;font-weight:700;col
 .glance dt{font-size:13px;color:var(--muted);margin-bottom:4px}
 .glance dd{margin:0;font-weight:700;font-size:15.5px;line-height:1.45}
 
+.help .helphead{max-width:860px;margin-bottom:40px}
+.help .client{font-size:15px;font-weight:700;color:var(--blue);margin:0 0 12px}
+.help h2{font-size:clamp(28px,3.4vw,42px);line-height:1.12;letter-spacing:-.025em;margin:0;font-weight:800}
+.helpgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.hcard{position:relative;display:flex;flex-direction:column;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:24px 22px 22px;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s var(--ease);overflow:hidden}
+.hcard::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--sky),var(--blue));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.hcard:hover{transform:translateY(-5px);border-color:rgba(47,111,174,.45);box-shadow:0 26px 44px -30px rgba(10,27,51,.55)}
+.hcard:hover::after{transform:scaleX(1)}
+.hnum{font-size:13px;font-weight:800;color:var(--blue);margin-bottom:14px}
+.hcard b{font-size:18px;line-height:1.3;margin-bottom:8px}
+.hcard p{margin:0 0 16px;font-size:15.5px;color:var(--muted);line-height:1.55;flex:1}
+.proof{font-size:13.5px;font-weight:700;color:var(--deep);border-top:1px solid var(--rule);padding-top:12px}
 /* case sections: sticky editorial layout */
 .case{padding:150px 0 0}
 .casegrid{display:grid;grid-template-columns:330px minmax(0,1fr);gap:72px;align-items:start}
@@ -222,7 +239,7 @@ h3.sub{font-size:22px;letter-spacing:-.01em;margin:56px 0 18px}
 footer{position:relative;overflow:hidden;margin-top:160px;background:var(--night);color:#fff;padding:110px 0 48px;isolation:isolate}
 footer::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 0 60%,var(--deep) 60% 100%)}
 footer .glow.g1{top:auto;bottom:-300px}
-.big{font-size:clamp(48px,8vw,112px);line-height:.95;letter-spacing:-.045em;font-weight:900;margin:0 0 26px}
+.big{font-size:clamp(44px,7vw,96px);line-height:.95;letter-spacing:-.045em;font-weight:900;margin:0 0 26px}
 footer p.lead{color:#BFD2E8;font-size:19px;max-width:32em;margin:0 0 34px}
 .mail{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap}
 .mailbtn{font:inherit;font-size:clamp(18px,2.2vw,24px);font-weight:700;color:#fff;background:transparent;border:0;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:var(--sky);text-decoration-thickness:2px;text-underline-offset:6px}
@@ -259,6 +276,7 @@ footer p.lead{color:#BFD2E8;font-size:19px;max-width:32em;margin:0 0 34px}
 
 @media (max-width:1100px){
   .dots{display:none}
+  .helpgrid{grid-template-columns:1fr 1fr}
   .casegrid,.aboutbox{grid-template-columns:1fr;gap:36px}
   .side{position:static}
   .chip.c1{left:-12px}.chip.c2{right:-12px}.chip.c3{left:0}
@@ -276,6 +294,7 @@ footer p.lead{color:#BFD2E8;font-size:19px;max-width:32em;margin:0 0 34px}
   .glance div:nth-child(2){border-right:0}
   .glance div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
   .facts,.grid2,.sites{grid-template-columns:1fr}
+  .helpgrid{grid-template-columns:1fr}
   .pbr div{grid-template-columns:1fr;gap:6px}
   .timeline li{grid-template-columns:1fr;gap:2px}
   .browser{height:240px}
@@ -306,6 +325,7 @@ footer p.lead{color:#BFD2E8;font-size:19px;max-width:32em;margin:0 0 34px}
   <nav aria-label="Main">
     <ul>
       <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#help">How I help</a></li>
       <li><a href="#elevate">Elevate</a></li>
       <li><a href="#websites">Websites</a></li>
       <li><a href="#about">About</a></li>
@@ -319,10 +339,11 @@ footer p.lead{color:#BFD2E8;font-size:19px;max-width:32em;margin:0 0 34px}
   <div class="wrap herogrid">
     <div>
       <p class="hi"><span class="pulse" aria-hidden="true"></span>Open to full-time remote roles</p>
-      <h1><span class="name">Hi, I'm Daniel Korrie.</span>I build the AI systems behind sales and marketing teams.</h1>
-      <p class="lede">Prospecting pipelines, content workflows, and daily briefings that people actually use. I write them in Python with Claude, and I build them around how a team really works.</p>
+      <p class="name">Hi, I'm Daniel Korrie. <span>AI Automation Specialist</span></p>
+      <h1>I build the AI systems behind sales and marketing&nbsp;teams.</h1>
+      <p class="lede">I spent years in B2B sales before I started building automation. Now I use Python, Claude agents, and API integrations to take repetitive work off sales and marketing teams and connect the tools they already use.</p>
       <div class="row">
-        <a class="btn primary" href="#pipeline">See the work</a>
+        <a class="btn primary" href="#pipeline">Explore my work</a>
         <a class="btn ghost" href="Daniel-Korrie-Resume.pdf" download>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
           Download resume</a>
@@ -343,9 +364,9 @@ footer p.lead{color:#BFD2E8;font-size:19px;max-width:32em;margin:0 0 34px}
     <figure class="portrait">
       <div class="ring" aria-hidden="true"></div>
       <div class="arch"><img src="img/daniel-korrie.jpg" alt="Daniel Korrie, smiling, in a light blue button-down shirt" width="560" height="700"></div>
-      <div class="chip c1"><span class="ic" aria-hidden="true">35s</span><span><b>Per prospect</b><small>Manna pipeline</small></span></div>
-      <div class="chip c2"><span class="ic" aria-hidden="true">AI</span><span><b>Python + Claude</b><small>Agents, APIs, MCP</small></span></div>
-      <div class="chip c3"><span class="ic" aria-hidden="true">IN</span><span><b>Indianapolis</b><small>Working remotely</small></span></div>
+      <div class="chip c1"><span class="ic" aria-hidden="true">35s</span><span><b>Per prospect</b><small>Manna prospecting pipeline</small></span></div>
+      <div class="chip c2"><span class="ic" aria-hidden="true">3</span><span><b>AI tools for staff</b><small>Elevate Indianapolis</small></span></div>
+      <div class="chip c3"><span class="ic" aria-hidden="true">80+</span><span><b>Sales calls a day</b><small>B2B sales at Spot Freight</small></span></div>
     </figure>
   </div>
 </section>
@@ -373,6 +394,22 @@ footer p.lead{color:#BFD2E8;font-size:19px;max-width:32em;margin:0 0 34px}
       <div><dt>Background</dt><dd>B2B sales, digital marketing, web development</dd></div>
     </dl>
   </div>
+
+
+  <section class="case help" id="help">
+    <div class="wrap">
+      <div class="helphead rv">
+        <p class="client">How I can help your team</p>
+        <h2>I understand how sales and marketing work gets done, and I build the systems that make it run better.</h2>
+      </div>
+      <div class="helpgrid rv">
+        <a class="hcard" href="#manna"><span class="hnum">Prospecting</span><b>Lead generation that runs itself</b><p>Find, research, score, and contact prospects automatically, with people stepping in only where judgment matters.</p><span class="proof">Proof: Manna Origins pipeline</span></a>
+        <a class="hcard" href="#elevate"><span class="hnum">Content</span><b>On-brand content without the bottleneck</b><p>Drafting and design tools tuned to a team's voice and brand, so non-specialists can ship good work fast.</p><span class="proof">Proof: Elevate content and graphics tools</span></a>
+        <a class="hcard" href="#elevate"><span class="hnum">Leadership</span><b>Briefings and follow-ups for busy leaders</b><p>Connect email, Slack, and other tools into one daily view, with reminders so nothing slips.</p><span class="proof">Proof: Elevate CEO briefing</span></a>
+        <a class="hcard" href="#websites"><span class="hnum">Web</span><b>Pages and tracking that close the loop</b><p>Landing pages, CMS setup, and analytics, so the leads an automation creates have somewhere to go.</p><span class="proof">Proof: client websites</span></a>
+      </div>
+    </div>
+  </section>
 
   <section class="case" id="manna">
     <div class="wrap casegrid">
@@ -425,9 +462,9 @@ footer p.lead{color:#BFD2E8;font-size:19px;max-width:32em;margin:0 0 34px}
             </div>
             <a class="live" href="https://elevate-content-generator.vercel.app">Open the live app</a>
           </div>
-          <div class="browser" aria-hidden="true">
+          <div class="browser">
             <div class="bar"><i></i><i></i><i></i><span>elevate-content-generator.vercel.app</span></div>
-            <img src="img/elevate-content-generator.jpg" alt="" width="800" height="816">
+            <img src="img/elevate-content-generator.jpg" alt="The Elevate content generator form" width="800" height="816">
           </div>
         </div>
         <ul class="bullets">
@@ -501,7 +538,7 @@ footer p.lead{color:#BFD2E8;font-size:19px;max-width:32em;margin:0 0 34px}
 <footer id="contact">
   <span class="glow g1"></span>
   <div class="wrap">
-    <h2 class="big">Let's build<br>something useful.</h2>
+    <h2 class="big">Let's talk about your<br>team's workflows.</h2>
     <p class="lead">I'm looking for a full-time role building AI workflows for a sales, marketing, or GTM team. If that's what you need, I'd like to hear about it.</p>
     <div class="mail">
       <button class="mailbtn" type="button" data-copy="danielkorrie56@gmail.com">danielkorrie56@gmail.com</button>
@@ -521,6 +558,7 @@ footer p.lead{color:#BFD2E8;font-size:19px;max-width:32em;margin:0 0 34px}
 
 <ul class="dots" id="dots" aria-hidden="true">
   <li><a href="#pipeline"><span>Pipeline</span></a></li>
+  <li><a href="#help"><span>How I help</span></a></li>
   <li><a href="#manna"><span>Manna Origins</span></a></li>
   <li><a href="#elevate"><span>Elevate</span></a></li>
   <li><a href="#websites"><span>Websites</span></a></li>
@@ -535,14 +573,14 @@ document.documentElement.classList.add('js');
 
   /* pipeline data */
   var stages = [
-    {t:'Find', s:'Google Places, Apollo', ai:false, d:'Searches Google Places and Apollo for businesses that match Manna\'s target buyer, and saves each new one only once.'},
-    {t:'Research', s:'Claude agent', ai:true, d:'A Claude agent researches each business and writes a short profile: what they do and why they might be a fit.'},
-    {t:'Score', s:'YAML rules', ai:false, d:'Plain rules in a YAML file give every prospect a score from 0 to 100 and a tier from 1 to 3. No model call, so it\'s fast and cheap.'},
-    {t:'Write', s:'Claude agent', ai:true, d:'A Claude agent drafts a short, personal first email using the research notes.'},
-    {t:'Send', s:'Gmail API', ai:false, d:'Emails go out through the Gmail API, and every send is logged against the prospect.'},
-    {t:'Read replies', s:'Claude agent', ai:true, d:'A Claude agent reads each reply and judges whether the person is interested, so the right leads move forward.'},
-    {t:'Hand off', s:'Notion CRM', ai:false, d:'Warm leads land on the sales team\'s Notion board with all the research and history attached.'},
-    {t:'Report', s:'Notion', ai:false, d:'Every run ends with a summary: what worked, what failed, and what\'s waiting in the retry queue.'}
+    {t:'Find', i:'Target buyer profile and location', o:'New prospect records, no duplicates', s:'Google Places, Apollo', ai:false, d:'Searches Google Places and Apollo for businesses that match Manna\'s target buyer, and saves each new one only once.'},
+    {t:'Research', i:'Business name and listing', o:'A short profile of the business', s:'Claude agent', ai:true, d:'A Claude agent researches each business and writes a short profile: what they do and why they might be a fit.'},
+    {t:'Score', i:'The profile', o:'A 0 to 100 score and a tier from 1 to 3', s:'YAML rules', ai:false, d:'Plain rules in a YAML file give every prospect a score from 0 to 100 and a tier from 1 to 3. No model call, so it\'s fast and cheap.'},
+    {t:'Write', i:'Profile and tier', o:'A personal first email', s:'Claude agent', ai:true, d:'A Claude agent drafts a short, personal first email using the research notes.'},
+    {t:'Send', i:'The drafted email', o:'A sent email, logged to the prospect', s:'Gmail API', ai:false, d:'Emails go out through the Gmail API, and every send is logged against the prospect.'},
+    {t:'Read replies', i:'Each reply', o:'An interested or not-interested read', s:'Claude agent', ai:true, d:'A Claude agent reads each reply and judges whether the person is interested, so the right leads move forward.'},
+    {t:'Hand off', i:'A warm lead', o:'A Notion card with full context', s:'Notion CRM', ai:false, d:'Warm leads land on the sales team\'s Notion board with all the research and history attached.'},
+    {t:'Report', i:'The whole run', o:'A summary and a retry queue', s:'Notion', ai:false, d:'Every run ends with a summary: what worked, what failed, and what\'s waiting in the retry queue.'}
   ];
   var list = document.getElementById('stops'), fill = list.querySelector('.fill'), detail = document.getElementById('detail');
   stages.forEach(function(st,i){
@@ -559,7 +597,7 @@ document.documentElement.classList.add('js');
     items.forEach(function(el,k){ el.classList.toggle('done', k<=i); el.classList.toggle('on', k===i); });
     fill.style.width = (i/7*87.5) + '%';
     var st = stages[i];
-    detail.innerHTML = '<div class="swap num">'+String(i+1).padStart(2,'0')+'</div><div class="swap"><h3>'+st.t+'</h3><p>'+st.d+'</p></div><span class="swap tag '+(st.ai?'ai':'py')+'">'+(st.ai?'Claude agent':'Plain Python')+'</span>';
+    detail.innerHTML = '<div class="swap num">'+String(i+1).padStart(2,'0')+'</div><div class="swap"><h3>'+st.t+'</h3><p>'+st.d+'</p><div class="io"><span><em>In</em>'+st.i+'</span><span><em>Out</em>'+st.o+'</span></div></div><span class="swap tag '+(st.ai?'ai':'py')+'">'+(st.ai?'Claude agent':'Plain Python')+'</span>';
   }
   function play(){ if(reduce){ show(7); return; } show(0); timer = setInterval(function(){ show((cur+1)%8); }, 2600); }
   function stop(){ clearInterval(timer); timer = null; }
@@ -578,7 +616,7 @@ document.documentElement.classList.add('js');
     var sio = new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting) return; var id = '#'+e.target.id;
       navLinks.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href')===id || (id==='#manna' && a.getAttribute('href')==='#pipeline')); });
       dotLinks.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href')===id); }); }); }, {rootMargin:'-45% 0px -50% 0px'});
-    ['pipeline','manna','elevate','websites','about','contact'].forEach(function(id){ var el=document.getElementById(id); if(el) sio.observe(el); });
+    ['pipeline','help','manna','elevate','websites','about','contact'].forEach(function(id){ var el=document.getElementById(id); if(el) sio.observe(el); });
   } else { document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); }); }
 
   /* scroll: progress, nav, dots */
